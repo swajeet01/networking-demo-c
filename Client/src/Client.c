@@ -4,7 +4,7 @@
  Author      : Swajeet Swarnkar
  Version     :
  Copyright   : Copyright 2020 Swajeet Swarnkar
- Description : Hello World in C, Ansi-style
+ Description : Client written in C
  ============================================================================
  */
 
