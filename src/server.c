@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Server.c
+ Name        : server.c
  Author      : Swajeet Swarnkar
  Version     :
  Copyright   : Copyright 2020 Swajeet Swarnkar
@@ -67,7 +67,7 @@ int read_msg(int sock_d, char* buf, int len) {
 }
 
 int sock_d;
-const char *head = "GET: RESPONSE-01";
+const char *head = "GET: RESPONSE 1";
 
 void exit_server(int sig) {
     if(sock_d)
@@ -102,7 +102,7 @@ int main(void) {
         read_msg(client_d, buf, 256);
         puts(buf);
         if(!strncasecmp(head, buf, strlen(head))) {
-            send_msg(client_d, "RESPONSE 01\n");
+            send_msg(client_d, "RESPONSE 1\n");
         }
         close(client_d);
     }

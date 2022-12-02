@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Client.c
+ Name        : client.c
  Author      : Swajeet Swarnkar
  Version     :
  Copyright   : Copyright 2020 Swajeet Swarnkar
@@ -78,7 +78,7 @@ void reg_handler(int sig, void (*handler)(int)) {
 
 int main(void) {
     int sock_d = open_socket("127.0.0.1", "12345");
-    send_msg(sock_d, "GET: RESPONSE-01\n");
+    send_msg(sock_d, "GET: RESPONSE 1\n");
     char buf[256];
     read_msg(sock_d, buf, 256);
     puts(buf);
